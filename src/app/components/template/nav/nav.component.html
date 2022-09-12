@@ -2,7 +2,7 @@
     <!--para aparecer nosso nav na lateral-->
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
-            <a mat-list-item>
+            <a mat-list-item routerLink="/">
                 <i class="material-icons">
 
                     home
@@ -13,7 +13,7 @@
             </a>
 
 
-            <a mat-list-item>
+            <a mat-list-item routerLink="/products">
                 <i class="material-icons">
 
                     storefront
@@ -23,4 +23,10 @@
             </a>
         </mat-nav-list>
     </mat-sidenav>
+
+<mat-sidenav-content class="content">
+    <!--o ponto onde vai ser substituido entre as telas de navegação--> 
+    <router-outlet></router-outlet>
+</mat-sidenav-content>
+       
 </mat-sidenav-container>

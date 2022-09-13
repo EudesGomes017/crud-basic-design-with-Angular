@@ -1,3 +1,5 @@
+import { HeaderData } from './header-data.model';
+import { HeaderService } from './header.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerService: HeaderService) { }
 
   ngOnInit(): void {
   }
+
+  //pegando o title diretamente do headerService
+  get title(): string {
+   return this.headerService.headerData.title
+  }
+
+  //pegando o title diretamente do headerService
+  get icon(): string {
+    return this.headerService.headerData.icon
+   }
+
+   //pegando o title diretamente do headerService
+  get routeUrl(): string {
+    return this.headerService.headerData.routeUrl
+   }
 
 }
